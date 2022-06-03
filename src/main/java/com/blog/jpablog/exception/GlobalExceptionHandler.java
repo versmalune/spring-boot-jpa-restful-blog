@@ -6,7 +6,7 @@ import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@RestControllerAdvice
+@RestControllerAdvice // Controller 전역에서 발생할 수 있는 예외 잡아 throw + 특정 클래스에서 발생할 수 있는 예외 잡아 throw (@ControllerAdvice + @ResponseBody)
 @Slf4j
 public class GlobalExceptionHandler {
     @ExceptionHandler(CustomException.class) // CUSTOM EXCEPTION
