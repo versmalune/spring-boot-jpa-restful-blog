@@ -23,7 +23,7 @@ public class BoardController {
         return boardService.findAll();
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public Long save(@PathVariable final Long id, @RequestBody final BoardDto boardDto) {
         return boardService.update(id, boardDto);
     }
