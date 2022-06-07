@@ -1,7 +1,7 @@
 package com.blog.jpablog.board;
 
-import com.blog.jpablog.entity.Board;
-import com.blog.jpablog.entity.BoardRepository;
+import com.blog.jpablog.model.Board;
+import com.blog.jpablog.repository.BoardRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
