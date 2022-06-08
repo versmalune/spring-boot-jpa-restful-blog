@@ -36,4 +36,9 @@ public class BoardService {
         board.update(boardDto.getTitle(), boardDto.getContent(), boardDto.getWriter());
         return id;
     }
+
+    @Transactional
+    public void delete(final Long id) {
+        boardRepository.deleteById(id);
+    }
 }
