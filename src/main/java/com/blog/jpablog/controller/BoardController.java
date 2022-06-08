@@ -13,19 +13,19 @@ import java.util.List;
 public class BoardController {
     private final BoardService boardService;
 
-    @PostMapping("/")
-    public Long save(@RequestBody final BoardDto boardDto) {
-        return boardService.save(boardDto);
-    }
-
-    @GetMapping("/")
+    @GetMapping("")
     public List<BoardDto> findAll() {
         return boardService.findAll();
     }
 
+    @PostMapping("/new")
+    public void save(@RequestBody final BoardDto boardDto) {
+        boardService.save(boardDto);
+    }
+
     @PutMapping("/{id}")
-    public Long save(@PathVariable final Long id, @RequestBody final BoardDto boardDto) {
-        return boardService.update(id, boardDto);
+    public void update(@PathVariable final Long id, @RequestBody final BoardDto boardDto) {
+        boardService.update(id, boardDto);
     }
 
     @DeleteMapping("/{id}")
